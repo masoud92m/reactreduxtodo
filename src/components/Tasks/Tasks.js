@@ -5,10 +5,12 @@ import Task from './Task/Task';
 class Tasks extends Component {
     render() {
         return (
-            <div>
-                <Task />
-                <Task />
-                <Task />
+            <div className='row'>
+                <div className='col-md-12'>
+                    <Task />
+                    <Task />
+                    <Task />
+                </div>
             </div>
         );
     }
