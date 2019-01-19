@@ -4,9 +4,9 @@ import Todo from './containers/Todo/Todo';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faTimes, faRedo } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faCheck, faTimes);
+library.add(faCheck, faTimes, faRedo);
 
 class App extends Component {
   render() {
