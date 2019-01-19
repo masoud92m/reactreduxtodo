@@ -13,11 +13,12 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case actionType.ADD_TASK:
             return {
-                ...state,
                 tasks: state.tasks.concat({ id: Math.random(), value: action.task, status: 'unchecked' })
             }
         case actionType.DELETE_TASK:
-            return {}
+            return {
+                tasks: state.tasks.filter(task => task.id !== action.id)
+            }
         case actionType.CHECK_TASK:
             return {}
         case actionType.UNCHECK_TASK:

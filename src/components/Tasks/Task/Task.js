@@ -9,7 +9,7 @@ const task = (props) => {
         li = <li className="list-group-item list-group-item-success">
             <div className="btn-group btn-group-sm float-right">
                 <button type="button" className="btn btn-success"><FontAwesomeIcon icon="check" /></button>
-                <button type="button" className="btn btn-danger"><FontAwesomeIcon icon="times" /></button>
+                <button type="button" className="btn btn-danger" onClick={props.deleteButton}><FontAwesomeIcon icon="times" /></button>
             </div>
             {props.taskName}
         </li>
@@ -17,7 +17,7 @@ const task = (props) => {
         li = <li className="list-group-item list-group-item-primary selected">
             <div className="btn-group btn-group-sm float-right">
                 <button type="button" className="btn btn-primary"><FontAwesomeIcon icon="redo" /></button>
-                <button type="button" className="btn btn-danger"><FontAwesomeIcon icon="times" /></button>
+                <button type="button" className="btn btn-danger" onClick={props.deleteButton}><FontAwesomeIcon icon="times" /></button>
             </div>
             {props.taskName}
         </li>
