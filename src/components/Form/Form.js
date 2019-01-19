@@ -7,13 +7,13 @@ class Form extends Component {
         return (
             <div className='row form-box'>
                 <div className='col-md-12'>
-                    <div class="card bg-light text-dark">
-                        <div class="card-body">
-                        <h5 class="card-title">Add New Task</h5>
-                            <div class="input-group mb-3" >
-                                <input type="text" class="form-control" placeholder="New Task" />
-                                <div class="input-group-append">
-                                    <button class="btn btn-success" type="submit">Add Task</button>
+                    <div className="card bg-light text-dark">
+                        <div className="card-body">
+                        <h5 className="card-title">Add New Task</h5>
+                            <div className="input-group mb-3" >
+                                <input type="text" className="form-control" placeholder="New Task" />
+                                <div className="input-group-append">
+                                    <button className="btn btn-success" type="submit">Add Task</button>
                                 </div>
                             </div>
                         </div>

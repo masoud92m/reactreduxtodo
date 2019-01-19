@@ -13,9 +13,9 @@ class Tasks extends Component {
                 <div className='col-md-12'>
                     <h3>Tasks</h3>
                     <hr />
-                    <ul class="list-group">
+                    <ul className="list-group">
                         {tasks.map(task => (
-                            <Task taskStatus={task.status} taskName={task.value} />
+                            <Task key={task.id} taskStatus={task.status} taskName={task.value} />
                         ))}
                     </ul>
                 </div>
