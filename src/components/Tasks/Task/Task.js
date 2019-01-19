@@ -8,7 +8,7 @@ const task = (props) => {
     if (props.taskStatus === 'unchecked') {
         li = <li className="list-group-item list-group-item-success">
             <div className="btn-group btn-group-sm float-right">
-                <button type="button" className="btn btn-success"><FontAwesomeIcon icon="check" /></button>
+                <button type="button" className="btn btn-success" onClick={props.checkButton}><FontAwesomeIcon icon="check" /></button>
                 <button type="button" className="btn btn-danger" onClick={props.deleteButton}><FontAwesomeIcon icon="times" /></button>
             </div>
             {props.taskName}
@@ -16,7 +16,7 @@ const task = (props) => {
     } else {
         li = <li className="list-group-item list-group-item-primary selected">
             <div className="btn-group btn-group-sm float-right">
-                <button type="button" className="btn btn-primary"><FontAwesomeIcon icon="redo" /></button>
+                <button type="button" className="btn btn-primary" onClick={props.unCheckButton}><FontAwesomeIcon icon="redo" /></button>
                 <button type="button" className="btn btn-danger" onClick={props.deleteButton}><FontAwesomeIcon icon="times" /></button>
             </div>
             {props.taskName}

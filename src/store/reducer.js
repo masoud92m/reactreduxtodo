@@ -2,10 +2,10 @@ import * as actionType from './actions';
 
 const initialState = {
     tasks: [
-        { id: 1, value: 'angular', status: 'unchecked' },
-        { id: 2, value: 'react', status: 'checked' },
-        { id: 3, value: 'redux', status: 'checked' },
-        { id: 4, value: 'vue.js', status: 'unchecked' }
+        { id: 1, value: 'Angular', status: 'unchecked' },
+        { id: 2, value: 'React', status: 'checked' },
+        { id: 3, value: 'Redux', status: 'checked' },
+        { id: 4, value: 'Vue.js', status: 'unchecked' }
     ]
 }
 
@@ -20,9 +20,13 @@ const reducer = (state = initialState, action) => {
                 tasks: state.tasks.filter(task => task.id !== action.id)
             }
         case actionType.CHECK_TASK:
-            return {}
+            return {
+                tasks: state.tasks.map(task => task.id === action.id ? { ...task, status: 'checked' } : task)
+            }
         case actionType.UNCHECK_TASK:
-            return {}
+            return {
+                tasks: state.tasks.map(task => task.id === action.id ? { ...task, status: 'unchecked' } : task)
+            }
         default:
             return state
     }

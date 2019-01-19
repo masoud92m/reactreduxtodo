@@ -20,7 +20,9 @@ class Tasks extends Component {
                             <Task key={task.id}
                                 taskStatus={task.status}
                                 taskName={task.value}
-                                deleteButton={() => this.props.onDeleteTask(task.id)} />
+                                deleteButton={() => this.props.onDeleteTask(task.id)}
+                                checkButton={() => this.props.onCheckTask(task.id)}
+                                unCheckButton={() => this.props.onUncheckTask(task.id)} />
                         ))}
                     </ul>
                 </div>
@@ -37,7 +39,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onDeleteTask: (id) => dispatch({ type: actionType.DELETE_TASK, id: id})
+        onDeleteTask: (id) => dispatch({ type: actionType.DELETE_TASK, id: id }),
+        onCheckTask: (id) => dispatch({ type: actionType.CHECK_TASK, id: id }),
+        onUncheckTask: (id) => dispatch({ type: actionType.UNCHECK_TASK, id: id })
     }
 }
 
