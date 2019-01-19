@@ -13,7 +13,7 @@ class Todo extends Component {
                     <Form />
                     <Tasks />
                     <hr />
-                    <a rel="noopener noreferrer" href="https://github.com/masoud92m/reactreduxtodo" target="_blank" className="text-muted"><FontAwesomeIcon icon="copyright" /> TIme to Hack</a>
+                    <a rel="noopener noreferrer" href="https://github.com/masoud92m/reactreduxtodo" target="_blank" className="text-muted"><FontAwesomeIcon icon="copyright" /> Time to Hack</a>
                 </div>
             </div>
         );
