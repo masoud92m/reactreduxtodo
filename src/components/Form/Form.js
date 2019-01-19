@@ -15,6 +15,7 @@ class Form extends Component {
         const value = this.state.inputNewTast.trim();
         if (value.length > 0) {
             this.props.onAddTask(value);
+            this.setState({inputNewTast: ''})
         }
     }
 
