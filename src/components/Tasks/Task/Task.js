@@ -5,7 +5,7 @@ import './Task.css';
 
 const task = (props) => {
     var li = '';
-    if (props.taskType === 'unchecked') {
+    if (props.taskStatus === 'unchecked') {
         li = <li class="list-group-item list-group-item-success">
             <div class="btn-group btn-group-sm float-right">
                 <button type="button" class="btn btn-success"><FontAwesomeIcon icon="check" /></button>
